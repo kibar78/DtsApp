@@ -33,7 +33,7 @@ class RegisterActivity : AppCompatActivity() {
             val password = binding.edtPassword.text.toString()
             val checkEmail = db.checkEmail(email)
             if (!checkEmail) {
-                val insert = db.insert(email, password)
+                val insert = db.insertUser(email, password)
                 if (insert) {
                     Toast.makeText(applicationContext, "Registered Successfully", Toast.LENGTH_SHORT).show()
                     finish()

@@ -6,7 +6,7 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
-import com.example.kalkulator.database.DatabaseNote
+import com.example.kalkulator.database.DatabaseHelper
 import com.example.kalkulator.database.Note
 import com.example.kalkulator.databinding.ActivityMainBinding
 
@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity(){
 
     private lateinit var binding: ActivityMainBinding
 
-    private lateinit var db: DatabaseNote
+    private lateinit var db: DatabaseHelper
     private lateinit var notesList: List<Note>
     private lateinit var adapter: ArrayAdapter<String>
     private var titlesList: MutableList<String> = mutableListOf()
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity(){
             }
         }
 
-        db = DatabaseNote(this)
+        db = DatabaseHelper(this)
 
         binding.fab.setOnClickListener {
             val goEdit = Intent(this, AddEditActivity::class.java)

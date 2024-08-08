@@ -9,7 +9,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.kalkulator.database.DatabaseNote
+import com.example.kalkulator.database.DatabaseHelper
 import com.example.kalkulator.database.Note
 import com.example.kalkulator.databinding.ActivityAddEditBinding
 import java.text.SimpleDateFormat
@@ -20,7 +20,7 @@ class AddEditActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAddEditBinding
 
-    private lateinit var db: DatabaseNote
+    private lateinit var db: DatabaseHelper
     private var note: Note? = null
     private var isEdit = false
 
@@ -35,7 +35,7 @@ class AddEditActivity : AppCompatActivity() {
             insets
         }
 
-        db = DatabaseNote(this)
+        db = DatabaseHelper(this)
 
         if (intent.hasExtra("note_id")) {
             val noteId = intent.getIntExtra("note_id", -1)
