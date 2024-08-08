@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KalkulatorActivity">
+
+
+    <TextView
+        android:id="@+id/tv_judul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Masukkan Dua Angka"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:textSize="24sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"/>
+
+    <EditText
+        android:id="@+id/edt_angkaPertama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Masukkan Angka Pertama"
+        android:textSize="14sp"
+        android:layout_below="@id/tv_judul"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="22dp"/>
+
+    <EditText
+        android:id="@+id/edt_angkaKedua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_below="@id/edt_angkaPertama"
+        android:hint="Masukkan Angka Kedua"
+        android:inputType="number"/>
+
+    <Button
+        android:id="@+id/btn_tambah"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_angkaKedua"
+        android:textSize="28sp"
+        android:backgroundTint="@color/navy"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="18dp"
+        android:text="+"/>
+    <Button
+        android:id="@+id/btn_kurang"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_angkaKedua"
+        android:textSize="28sp"
+        android:layout_toEndOf="@id/btn_tambah"
+        android:text="-"
+        android:backgroundTint="@color/navy"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="18dp"/>
+
+    <Button
+        android:id="@+id/btn_kali"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_angkaKedua"
+        android:textSize="28sp"
+        android:layout_alignBottom="@id/btn_bagi"
+        android:layout_toStartOf="@id/btn_bagi"
+        android:text="X"
+        android:backgroundTint="@color/navy"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="18dp"/>
+    <Button
+        android:id="@+id/btn_bagi"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_angkaKedua"
+        android:textSize="28sp"
+        android:text="/"
+        android:backgroundTint="@color/navy"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="18dp"
+        android:layout_alignParentEnd="true"/>
+    <Button
+        android:id="@+id/btn_bersihkan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_tambah"
+        android:textSize="24sp"
+        android:backgroundTint="@color/navy"
+        android:text="BERSIHKAN"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:id="@+id/tv_hasil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_bersihkan"
+        android:layout_marginTop="18dp"
+        android:text="HASIL"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:textSize="24sp"
+        android:layout_alignParentStart="true"/>
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_hasil"
+        android:text="0"
+        android:textAlignment="center"
+        android:layout_marginTop="16dp"
+        android:textStyle="normal|bold"
+        android:textSize="24sp"/>
+
+</RelativeLayout>

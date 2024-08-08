@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Kalkulator</string>
+    <string name="kalkulator">Kalkulator</string>
+    <string name="setting">Setting</string>
+    <string name="help">Help</string>
+    <string name="menyimpan_file">Menyimpan File</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+</resources>
